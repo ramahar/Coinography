@@ -1,0 +1,21 @@
+<% if logged_in? %>
+  <script type="text/javascript">
+    window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  </script>
+<% end %>
+<script type="text/javascript">
+  window.images = {
+   dashboardBlue: "<%= asset_path("icons/dashboard-blue.png") %>",
+   dashboardGray: "<%= asset_path("icons/dashboard-gray.png") %>",
+   buySellBlue: "<%= asset_path("icons/buy-sell-blue.png") %>",
+   buySellGray: "<%= asset_path("icons/buy-sell-gray.png") %>",
+   BTC: "<%= asset_path("icons/BTC.png") %>",
+   ETH: "<%= asset_path("icons/ETH.png") %>",
+   LTC: "<%= asset_path("icons/LTC.png") %>",
+   BCH: "<%= asset_path("icons/BCH.png") %>"
+  }
+</script>
+<main id='root'>React isn't working</main>

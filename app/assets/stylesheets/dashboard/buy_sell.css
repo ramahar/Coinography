@@ -1,0 +1,106 @@
+.buy-sell-container {
+  background-color: white;
+  width: 576px;
+  height: 388px;
+  border: 1px solid rgb(218, 225, 233);
+}
+
+.buy-sell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-sell-header h1 {
+  color: rgb(6, 103, 208);
+  height: 54px;
+  line-height: 54px;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.conversion-symbol {
+  color: rgb(155, 166, 178);
+  font-size: 24px;
+  position: relative;
+  top: 18px;
+}
+
+.buy-sell-form {
+  padding: 26px;
+  padding-top: 0;
+}
+
+.buy-sell-form input {
+  width: 220px;
+  border-radius: 6px;
+  display: inline;
+  margin: 0 15px;
+  margin-top: 26px;
+}
+
+.buy-sell-form .buy-sell-button {
+  width: 95%;
+  margin-right: 14px;
+  margin-left: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.buy-sell-form .buy-sell-button:hover {
+  cursor: pointer;
+  background-color: #519AFA
+}
+
+.buy-sell-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.buy-sell-form-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 8px;
+  border-radius: 6px;
+  width: 90px;
+}
+
+.buy-sell-form-icon:hover {
+  cursor: pointer;
+}
+
+.buy-sell-form-icon img {
+  height: 36px;
+  width: 36px;
+}
+
+.buy-sell-form-icon h1 {
+  color: rgb(78, 92, 110);
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+.buy-sell-button {
+  background-color: rgb(60, 144, 223);
+  border-radius: 4px;
+  border: none;
+}
+
+.selected-icon {
+  border: 1px solid rgb(75, 173, 2);
+  border-radius: 6px;
+}
+
+.unselected-icon {
+  border: 1px solid rgb(218, 225, 233);
+  border-radius: 6px;
+}

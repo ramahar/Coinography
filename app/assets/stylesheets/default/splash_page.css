@@ -1,0 +1,91 @@
+.splash-container {
+  height: 600px;
+  background: linear-gradient(rgb(15, 98, 189) 24%, rgb(10, 64, 122) 168%);
+}
+
+.splash-content {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.splash-heading {
+  margin-top: 82px;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.splash-text {
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.splash-form {
+  width: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-email-container {
+  margin-right: 10px;
+}
+
+.splash-email {
+  border-radius: 4px;
+  border-width: 0;
+  height: 50px;
+  width: 321px;
+  font-size: 16px;
+  font-family: "Avenir Next", sans-serif;
+  padding-left: 16px;
+}
+
+.splash-button {
+  background-color: rgb(0, 197, 127);
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0;
+  color: white;
+  height: 62px;
+  border-radius: 4px;
+  border-width: 0;
+  height: 50px;
+  transition: 0.2s ease 0s;
+}
+
+.splash-button:hover {
+  background-color: rgb(0, 168, 102);
+  cursor: pointer;
+}
+
+.lower-splash {
+  font-weight: 500;
+}
+
+.lower-splash > h1 {
+  margin-top: 60px;
+  color: rgb(35, 49, 67);
+  text-align: center;
+  font-size: 32px;
+}
+
+.lower-splash > p {
+  color: rgb(131, 143, 160);
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 100px;
+}
+
+.modal .modal-errors {
+  width: 70%;
+  margin-bottom: -60px;
+  margin-top: 20px;
+}

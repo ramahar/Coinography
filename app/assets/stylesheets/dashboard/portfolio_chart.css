@@ -1,0 +1,108 @@
+.portfolio-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1178px;
+  margin: 25px auto;
+  background-color: white;
+  border: 1px solid rgb(218, 225, 233);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(125, 149, 182);
+}
+
+.portfolio-chart-header {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.portfolio-chart-header h1 {
+  padding: 20px;
+  padding-bottom: 0px;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+  letter-spacing: 2px;
+}
+
+.portfolio-chart-number {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.portfolio-chart-number h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(78, 92, 110);
+  text-align: center;
+  font-family: inherit;
+}
+
+.portfolio-chart-number h3 {
+  font-size: 30px;
+  color: rgb(78, 92, 110);
+  font-family: inherit;
+}
+
+.portfolio-chart-dates {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  width: 100%;
+  border-top: 1px solid rgb(218, 225, 233);
+}
+
+.portfolio-chart-dates ul {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding:  8px 20px;
+  margin: 0 auto;
+}
+
+.portfolio-chart-dates ul, li {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+.chart-timeframes {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 90px;
+  left: 490px;
+}
+
+.chart-timeframes > li {
+  padding: 0 4px;
+  font-size: 13px;
+}
+
+.unselected-timeframe:hover {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+}
+
+.selected-timeframe:hover {
+  cursor: pointer;
+}
+
+.selected-timeframe {
+  color: rgb(6, 103, 208);
+}
+
+.unselected-timeframe {
+  color: rgb(155, 166, 178);
+}

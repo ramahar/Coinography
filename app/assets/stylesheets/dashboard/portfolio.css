@@ -1,0 +1,175 @@
+.portfolio-container {
+  background-color: white;
+  width: 576px;
+  height: 388px;
+  border: 1px solid rgb(218, 225, 233);
+  margin-bottom: 40px;
+}
+
+.portfolio-header {
+  color: rgb(6, 103, 208);
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-left {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 54px;
+  padding-left: 20px;
+  width: 100%;
+  border-bottom: 1px solid rgb(218, 225, 233);
+}
+
+.portfolio-tabs {
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+}
+
+.portfolio-tabs div {
+  color: inherit;
+  display: inline-block;
+  flex-grow: 4;
+  border-bottom: 1px solid rgb(218, 225, 233);
+}
+
+.portfolio-tabs .unselected-portfolio-tab {
+  color: rgb(125, 149, 182);
+  border-bottom: 1px solid rgb(218, 225, 233);
+}
+
+.portfolio-tabs .selected-portfolio-tab {
+  color: rgb(6, 103, 208);
+  border-bottom: 1px solid rgb(6, 103, 208);
+}
+
+.portfolio-tabs span:hover {
+  cursor: pointer;
+}
+
+.portfolio-tabs .portfolio-empty-div {
+  display: inline-block;
+  width: 12px;
+  border-bottom: 1px solid rgb(218, 225, 233);
+}
+
+.portfolio-tabs span {
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 54px;
+}
+
+.portfolio-header h1 {
+  color: inherit;
+  font-family: inherit;
+}
+
+.portfolio-header h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.portfolio-footer {
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-footer span {
+  height: 54px;
+  font-weight: 500;
+  color: rgb(125, 149, 182);
+  line-height: 54px;
+}
+
+.portfolio-list-item {
+  height: 69px;
+  border-bottom: 1px solid rgb(218, 225, 233);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.portfolio-list-item span {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 16px;
+  color: rgb(78, 92, 110);
+  display: inline;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.portfolio-list-item h1 {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 18px;
+  color: rgb(78, 92, 110);
+  padding-left: 12px;
+  display: inline;
+  flex-grow: 5;
+  text-align: left;
+}
+
+.portfolio-list-item h2 {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 16px;
+  color: rgb(78, 92, 110);
+  display: inline;
+  flex-grow: 3;
+  text-align: center;
+}
+
+.portfolio-list-item h3 {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 16px;
+  color: rgb(155, 166, 178);
+  display: inline;
+  flex-grow: 2;
+  text-align: right;
+}
+
+.pie-chart-spinner {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-chart-number h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(78, 92, 110);
+  display: inline;
+}
+
+.pie-chart h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(125, 149, 182);
+  letter-spacing: 2px;
+  padding-left: 16px;
+}
+
+.pie-chart-number h3 {
+  font-size: 30px;
+  color: rgb(78, 92, 110);
+  display: inline;
+  vertical-align: top;
+}
+
+.pie-chart > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
