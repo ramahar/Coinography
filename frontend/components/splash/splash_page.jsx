@@ -91,7 +91,7 @@ class SplashPage extends React.Component {
         </div>
         <div className='lower-splash'>
           <h1>Create your cryptocurrency portfolio today</h1>
-          <p>Coincenter has a variety of features that make it the best place to start trading</p>
+          <p>Coinography has a variety of features that make it the best place to start trading</p>
         </div>
       </div>
     );

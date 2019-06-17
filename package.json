@@ -1,5 +1,5 @@
 {
-  "name": "coinCenter",
+  "name": "Coinography",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -39,13 +39,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rexbodoia/CoinCenter.git"
+    "url": "git+https://github.com/ramahar/Coinography.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rexbodoia/CoinCenter/issues"
+    "url": "https://github.com/ramahar/Coinography/issues"
   },
-  "homepage": "https://github.com/rexbodoia/CoinCenter#readme"
+  "homepage": "https://github.com/ramahar/Coinography#readme"
 }

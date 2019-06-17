@@ -6,7 +6,7 @@
 
 Coinography is a cryptocurrency trading platform inspired by Coinbase. This website was implemented utilizing Rails/PostgreSQL for the backend and React/Redux on the frontend. 
 
-Coinography uses the Coinbase Pro REST API to retrieve live crypto price data upon visiting the page. Recharts, a React charting library was used as a tool for rendering charts of price and value over time for coins and user portfolios, respectively. Moment.js was also used for date conversion because the price data from Coinbase Pro used dates in Unix Epoch Time form, whereas my transactions were stored in my database using Ruby's datetime object. 
+Coinbase Pro REST API was used to fetch price data in real-time. React's Recharts library was used for rendering price charts and user portfolios.
 
 ![](/app/assets/images/splash.png)
 
@@ -20,14 +20,6 @@ Coinography uses the Coinbase Pro REST API to retrieve live crypto price data up
 
 ![Portfolio Chart](/app/assets/images/dashboard.png)
 
-![Asset Chart](/app/assets/images/asset.png)
-
-### Obstacles
-
-There were several challenges I encountered while completing this project. The first of these difficulties was implementing live API calls to [Coinbase Pro](https://docs.pro.coinbase.com/#api). This was difficult for two reasons:
-
-The first obstacle was straightforward, but caused some design complications that persisted throughout the website. Like many other REST APIs, Coinbase Pro limits the number of API calls allowed to three per second. This meant that I needed to chain promises with setTimeout() functions of 350 milliseconds into chains that contained usually four API calls. Furthermore, if I did happen to receive a status 429 for exceeding my limit of requests, I needed to handle that error, wait a timeout interval, and then try again:
-
 ```Javascript
 //  frontend/actions/prices_actions.js
 
@@ -38,7 +30,7 @@ The first obstacle was straightforward, but caused some design complications tha
   );
   ```
 
-This became a recursive error handling call and would continue to call until no error was received. This obstacle also created a slight design dilemma. Because Coinbase only deals with four coins and there are only five timeframes (granularities) to request, there were only twenty API calls I would ever need to make. Unfortunately I had to spread these calls out somehow, so I decided to make the calls for the default timeframe of the dashboard upon login. When viewing the portfolio chart history, all four coin prices would need to be requested for any given timeframe, so I made these calls together if the information was not already stored in the global state:
+![Asset](/app/assets/images/asset.png)
 
 ```Javascript
 //  frontend/components/signed_in/dashboard/portfolio_chart.jsx
@@ -49,10 +41,3 @@ if (Object.values(this.props.prices[granularity]).length < 4) {
     .then(() => setTimeout(() => this.props.getPrices('ETH', granularity)
     .then(() => setTimeout(() => this.props.getPrices('LTC', granularity), 334)), 334)), 334));
 ```
-
-The second challenge I faced had to do with the fact that I calculated the portfolio and balance values history from transactions and current price history only. I originally considered storing balances at certain dates for all users in a table in my database, however there is no good way to choose what dates would be appropriate for that table except for choosing the dates of the user's past transactions. This would just end up being a waste of space because I already have the dates of past transactions, so I could just calculate net balance amounts from those dates and calculate values for different time granularities dynamically from a given set of price history data. Ultimately, that is exactly what I did, and it proved to be difficult because of how the data was formatted in Coinbase Pro's API json as well as the process of having to extract the price of each coin at every price date and multiply it by that coin's balance amount and then sum those values between the four coins at every price date. This was especially tricky because transactions could occur at any date and are often sparse, whereas each timeframe granularity corresponds to another, unrelated set of interval times. Ultimately, I created a calculations.js file to handle these data manipulations and value calculation functions:
-
-```Javascript
-//  frontend/util/calculations.js
-
-``` 
