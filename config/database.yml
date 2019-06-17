@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: coinCenter_production
+  adapter: postgresql
   username: coinCenter
   password: <%= ENV['COINCENTER_DATABASE_PASSWORD'] %>
