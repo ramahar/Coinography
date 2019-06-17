@@ -15,7 +15,7 @@ class SigninForm extends React.Component {
         {this.props.errors()}
         <div className='auth-container'>
           <div>
-            <h1 className='signin-form-header'>Sign in to Coincenter</h1>
+            <h1 className='signin-form-header'>Sign in to Coinography</h1>
 
             <form onSubmit={this.props.handleSubmit} className='signin-form'>
               <div className='signin-input-container'>

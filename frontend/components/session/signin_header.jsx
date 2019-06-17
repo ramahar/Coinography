@@ -22,7 +22,7 @@ class SigninHeader extends React.Component {
       <div className='signin-header'>
 
         <span onClick={this.splashRedirect} className='homepage-link'>
-          <h1 className='logo'>coincenter</h1>
+          <h1 className='logo'>coinography</h1>
         </span>
 
         <div className='signin-nav-links-container'>
