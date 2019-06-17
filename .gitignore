@@ -4,10 +4,17 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+.DS_Store
+
 # Ignore bundler config.
 /.bundle
+node_modules/
+bundle.js
+bundle.js.map
+
 
 # Ignore all logfiles and tempfiles.
+tmp/
 /log/*
 /tmp/*
 !/log/.keep
@@ -15,6 +22,7 @@
 
 # Ignore uploaded files in development
 /storage/*
+!/storage/.keep
 
 /node_modules
 /yarn-error.log
@@ -24,10 +32,3 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
-node_modules/
-bundle.js
-bundle.js.map
-.byebug_history
-.DS_Store
-npm-debug.log
