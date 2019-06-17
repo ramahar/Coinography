@@ -146,7 +146,7 @@
 	letter-spacing: .05em;
 	padding: 1em 2em;
 	transition: all .25s ease;
-	background-image: linear-gradient(#18C71B, #08BF0B);
+  background-color: rgb(5, 177, 105);
 	line-height: 1.15;
 }
 

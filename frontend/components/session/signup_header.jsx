@@ -28,9 +28,9 @@ class SignupHeader extends React.Component {
         </span>
 
         <div className='nav-links-container'>
-          <Link className='signup-other-link' to='/signin'>Log in</Link>
+          <Link className='signup-other-link' to='/signin'>Sign in</Link>
 
-          <span className='signup-same-button' onClick={this.signupRedirect}>Sign up</span>
+          <span className='signup-same-button' onClick={this.signupRedirect}>Get started</span>
         </div>
       </div>
     );

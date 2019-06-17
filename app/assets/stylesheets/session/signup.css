@@ -193,7 +193,7 @@
 	letter-spacing: .05em;
 	padding: 25px 35px;
 	transition: all .25s ease;
-	background-color: #08BF0B;
+	background-color: rgb(5, 177, 105);
 	line-height: 1.15;
 }
 
