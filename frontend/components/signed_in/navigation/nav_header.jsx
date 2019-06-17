@@ -44,7 +44,7 @@ class NavHeader extends React.Component {
     return (
       <div className='nav-header'>
         <div className='title-bar'>
-          <div className='logo'>coincenter</div>
+          <div className='logo'>coinography</div>
           <span className='profile-dropdown' onClick={(e) => this.openDropdown()}>{this.user.f_name} {this.user.l_name} &#9776;</span>
         </div>
         {this.renderDropdown()}

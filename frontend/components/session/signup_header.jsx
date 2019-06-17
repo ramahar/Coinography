@@ -24,7 +24,7 @@ class SignupHeader extends React.Component {
     return (
       <div className='signup-header'>
         <span onClick={this.splashRedirect} className='homepage-link'>
-          <h1 className='logo'>coincenter</h1>
+          <h1 className='logo'>coinography</h1>
         </span>
 
         <div className='nav-links-container'>

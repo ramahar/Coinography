@@ -62,7 +62,7 @@ class SignupForm extends React.Component {
             </form>
 
             <div className='have-account'>
-              <h1>Already have a Coincenter account?</h1>
+              <h1>Already have an account?</h1>
               <Link className='login-link' to='/signin'>Log in</Link>
             </div>
           </div>

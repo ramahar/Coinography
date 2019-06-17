@@ -75,8 +75,8 @@ class SplashPage extends React.Component {
           <SignupHeader history={this.props.history} location={this.props.location}/>
 
           <div className='splash-content'>
-            <h1 className='splash-heading'>Buy and sell digital currency</h1>
-            <p className='splash-text'>Coincenter is the easiest and most trusted place to buy, sell, and manage your digital currency</p>
+            <h1 className='splash-heading'>Buy and sell cryptocurrency</h1>
+            <p className='splash-text'>Coinography is the easiest place to buy, sell, and manage your cryptocurrency portfolio</p>
           </div>
 
           <form onSubmit={this.openModal} className='splash-form'>
@@ -90,7 +90,7 @@ class SplashPage extends React.Component {
           {this.renderModal()}
         </div>
         <div className='lower-splash'>
-          <h1>Create your digital currency portfolio today</h1>
+          <h1>Create your cryptocurrency portfolio today</h1>
           <p>Coincenter has a variety of features that make it the best place to start trading</p>
         </div>
       </div>
