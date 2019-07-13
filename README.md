@@ -10,13 +10,22 @@ Coinbase Pro REST API was used to fetch price data in real-time. React's Rechart
 
 ![](/app/assets/images/splash.png)
 
+### Technologies
++ Ruby on Rails backend with PostgreSQL database
++ React/Redux front-end
++ Coinbase Pro REST API 
++ React's Recharts library
+
+
 ### Features
-+ Coinography utilizes custom frontend to backend user authentication using BCrypt
-+ Demo login with seeded transaction history for any users who want to view only as a guest
-+ Upon login, a user sees a prominently featured chart of their portfolio value over time
-+ Small asset chart previews are also displayed on the dashboard, and each doubles as a link to its asset's full page
-+ All charts are dynamically time-framed and feature five timeframes with corresponding price granularities
-+ Users can create realtime 'dummy' transactions with any of the four coins at its live price
++ Coinography utilizes modular React components to display an interactive UI 
++ Portfolio history stored for every user, which is fetched and dynamically displayed upon login
++ Cryptocurrency historical data chart is displayed by fetching real-time price data from Coinbase Pro API
++ Price charts are dynamically time-framed using Recharts library
++ Users can create transactions instantly with real-time crypto prices 
+
+
+### Implementation
 
 ![Portfolio Chart](/app/assets/images/dashboard.png)
 
