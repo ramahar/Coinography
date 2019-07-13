@@ -6,8 +6,6 @@
 
 Coinography is a cryptocurrency trading platform inspired by Coinbase. This website was implemented utilizing Rails/PostgreSQL for the backend and React/Redux on the frontend. 
 
-Coinbase Pro REST API was used to fetch price data in real-time. React's Recharts library was used for rendering price charts and user portfolios.
-
 ![](/app/assets/images/splash.png)
 
 ### Technologies
@@ -15,7 +13,6 @@ Coinbase Pro REST API was used to fetch price data in real-time. React's Rechart
 + React/Redux front-end
 + Coinbase Pro REST API 
 + React's Recharts library
-
 
 ### Features
 + Coinography utilizes modular React components to display an interactive UI 
@@ -26,27 +23,32 @@ Coinbase Pro REST API was used to fetch price data in real-time. React's Rechart
 
 
 ### Implementation
-
+**User Portfolio**
 ![Portfolio Chart](/app/assets/images/dashboard.png)
 
-```Javascript
-//  frontend/actions/prices_actions.js
+User's portfolio is created by maintaining a transactions table in the database. Every time a transaction takes place, the portfolio is updated and rendered on the user dashboard.
 
-  export const fetchPrices = (symbol, granularity) => dispatch => (
-    ApiUtil.fetchPriceData(symbol, granularities[granularity])
-    .then(prices => dispatch(receivePrices(symbol, granularities[granularity], prices)))
-    .fail((e) => setTimeout(fetchPrices(symbol, granularity), 2000))
-  );
-  ```
-
+**Cryptocurrency historical data chart**
 ![Asset](/app/assets/images/asset.png)
 
+Multiple AJAX requests are chained to Coinbase Pro API to fetch historical price data in real-time, and Recharts is used to display the data in a visually appealing chart. Timescales can be toggled for the data set.
 ```Javascript
-//  frontend/components/signed_in/dashboard/portfolio_chart.jsx
+const receivePrices = (symbol, granularity, prices) => ({
+  type: RECEIVE_PRICES,
+  symbol, granularity, prices
+});
+```
 
-if (Object.values(this.props.prices[granularity]).length < 4) {
-  this.props.getPrices('BTC', granularity)
-    .then(() => setTimeout(() => this.props.getPrices('BCH', granularity)
-    .then(() => setTimeout(() => this.props.getPrices('ETH', granularity)
-    .then(() => setTimeout(() => this.props.getPrices('LTC', granularity), 334)), 334)), 334));
+**Buy/Sell Cryptocurrency**
+Users can post transactions, which are saved in the database. Cryptocurrencies can be bought or sold at real-time prices instantly, and the user portfolio gets updated accordingly.
+```Javascript
+const receiveTransactions = transactions => ({
+  type: RECEIVE_TRANSACTIONS,
+  transactions
+});
+
+const createTransaction = transaction => ({
+  type: CREATE_TRANSACTION,
+  transaction
+})
 ```
