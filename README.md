@@ -24,22 +24,27 @@ Coinography is a cryptocurrency trading platform inspired by Coinbase. This webs
 
 ### Implementation
 **User Portfolio**
+
 ![Portfolio Chart](/app/assets/images/dashboard.png)
 
 User's portfolio is created by maintaining a transactions table in the database. Every time a transaction takes place, the portfolio is updated and rendered on the user dashboard.
 
 **Cryptocurrency historical data chart**
+
 ![Asset](/app/assets/images/asset.png)
 
 Multiple AJAX requests are chained to Coinbase Pro API to fetch historical price data in real-time, and Recharts is used to display the data in a visually appealing chart. Timescales can be toggled for the data set.
 ```Javascript
-const receivePrices = (symbol, granularity, prices) => ({
-  type: RECEIVE_PRICES,
-  symbol, granularity, prices
-});
+export const fetchPriceData = (symbol, granularity) => (
+  $.ajax({
+    method: 'GET',
+    url: `https://api.pro.coinbase.com/products/${symbol}-USD/candles?granularity=${granularity}`
+  })
+)
 ```
 
 **Buy/Sell Cryptocurrency**
+
 Users can post transactions, which are saved in the database. Cryptocurrencies can be bought or sold at real-time prices instantly, and the user portfolio gets updated accordingly.
 ```Javascript
 const receiveTransactions = transactions => ({
