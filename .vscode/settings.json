@@ -10,12 +10,15 @@
     "sideBarSectionHeader.background": "#05080A",
     "activityBar.border": "#0b1015",
     "tab.border": "#0b1015",
-    "panel.border": "#05080A",
     "statusBar.border": "#05080A",
     "activityBar.background": "#3399ff",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
     "activityBarBadge.background": "#bf0060",
-    "activityBarBadge.foreground": "#e7e7e7"
-  }
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#007fff",
+    "statusBarItem.hoverBackground": "#3399ff",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#007fff"
 }
